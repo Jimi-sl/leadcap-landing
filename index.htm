@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LeadCap.Guru - Social Media Ad Analytics</title>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leadcap.guru/">
+<meta property="og:title" content="LeadCap.Guru - Ride the Wave of Social Ads">
+<meta property="og:description" content="Your friendly guru for cruising through TikTok, Instagram, Meta, and all the ad beaches in between. Get unified analytics and AI-powered insights.">
+<meta property="og:image" content="./assets/imgs/logo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="LeadCap.Guru">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://leadcap.guru/">
+<meta property="twitter:title" content="LeadCap.Guru - Ride the Wave of Social Ads">
+<meta property="twitter:description" content="Your friendly guru for cruising through TikTok, Instagram, Meta, and all the ad beaches in between. Get unified analytics and AI-powered insights.">
+<meta property="twitter:image" content="./assets/imgs/logo.png">
+
+<!-- WhatsApp / General -->
+<meta name="description" content="Your friendly guru for cruising through TikTok, Instagram, Meta, and all the ad beaches in between. Get unified analytics and AI-powered insights.">
+<meta name="keywords" content="social media analytics, TikTok ads, Instagram ads, Meta ads, Facebook ads, ad analytics, social media marketing">
+<meta name="author" content="LeadCap.Guru">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link rel="icon" type="image/png" href="./assets/imgs/logo.png"/>
+<link rel="apple-touch-icon" href="./assets/imgs/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #ff8c42;--secondary-color: #ffbc5b;--accent-color: #4ecdc4;--neutral-white: #ffffff;
+      --neutral-light: #fdf5e6;--neutral-medium: #ffe8cc;--neutral-dark: #6b4f4f;--text-color: #594a47; --dark-blue: #0b208d;}
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: var(--neutral-light);
+      color: var(--text-color);
+    }
+    .logo {
+        width: 32px;
+        height: 32px;
+    }
+    h1, h2, h3, .font-cartoon {
+        font-family: 'Fredoka One', cursive;
+    }
+    .hero-gradient {
+        background: linear-gradient(180deg, #ffbc5b 0%, #ff8c42 100%);
+    }
+    .btn-primary {
+        @apply bg-[var(--primary-color)] text-white font-bold rounded-full shadow-lg hover:bg-[#ff7a2e] transition-all duration-300 transform hover:-translate-y-1;
+    }
+    .btn-secondary {
+        @apply bg-[var(--secondary-color)] text-[var(--text-color)] font-bold rounded-full shadow-lg hover:bg-[#ffae4a] transition-all duration-300 transform hover:-translate-y-1;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVT6MS50VF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PVT6MS50VF');
+</script>
+</head>
+<body class="bg-[var(--neutral-light)] text-[var(--text-color)]">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<div class="flex h-full grow flex-col">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--neutral-medium)] bg-white/80 px-10 py-4 backdrop-blur-sm">
+<div class="flex items-center gap-3 text-[var(--primary-color)]">
+<img src="./assets/imgs/logo.png" alt="logo" class="logo" />
+<h2 class="text-2xl font-cartoon tracking-tight text-[var(--dark-blue)]">LeadCap</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors" href="#features">Features</a>
+<a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors" href="#how-it-works">How It Works</a>
+<!-- <a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors" href="#testimonials">Testimonials</a> -->
+<a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors" href="#pricing">Pricing</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors hidden sm:block" href="https://dashboard.leadcap.guru/login">Login</a>
+<a class="btn-primary flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden h-12 px-6 text-base" href="https://dashboard.leadcap.guru/register">
+<span class="truncate">Get Started</span>
+</a>
+</div>
+</header>
+<main class="flex-1">
+<section class="relative text-white" id="hero">
+<div class="hero-gradient">
+<div class="container mx-auto px-6 lg:px-8 py-40 md:py-52 text-center relative overflow-hidden">
+<div class="absolute -bottom-10 left-0 right-0">
+<svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg"><path d="M0,64L40,80C80,96,160,128,240,128C320,128,400,96,480,85.3C560,75,640,85,720,90.7C800,96,880,96,960,90.7C1040,85,1120,75,1200,64C1280,53,1360,43,1400,37.3L1440,32L1440,120L1400,120C1360,120,1280,120,1200,120C1120,120,1040,120,960,120C880,120,800,120,720,120C640,120,560,120,480,120C400,120,320,120,240,120C160,120,80,120,40,120L0,120Z" fill="#fdf5e6" fill-opacity="1"></path></svg>
+</div>
+<div class="relative z-10">
+<h1 class="text-5xl md:text-7xl font-cartoon leading-tight tracking-wider drop-shadow-lg">
+                    Ride the Wave of Social Ads
+                  </h1>
+<p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl font-light leading-relaxed drop-shadow-md">
+                    Your friendly guru for cruising through TikTok, Instagram, Meta, and all the ad beaches in between.
+                  </p>
+<a class="btn-secondary mt-12 inline-flex min-w-[220px] max-w-md mx-auto cursor-pointer items-center justify-center overflow-hidden h-14 px-8 text-lg" href="#demo">
+<span class="truncate">Watch Demo</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[var(--neutral-light)]" id="features">
+<div class="container mx-auto px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-cartoon text-[var(--primary-color)]">Unified Ad Analytics Platform</h2>
+<p class="mt-4 text-lg text-[var(--text-color)] max-w-2xl mx-auto">Monitor all your social media advertising campaigns in one centralized dashboard.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-[var(--neutral-white)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+<div class="flex items-center justify-center h-20 w-20 rounded-full bg-[var(--accent-color)] text-white mb-6">
+<svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-2xl font-cartoon mb-2 text-[var(--primary-color)]">One Big Dashboard</h3>
+<p class="text-[var(--text-color)]">View all your campaigns across Meta, Instagram, TikTok, LinkedIn, Snapchat, and Threads in a single interface. Compare performance metrics and track ROI across all platforms.</p>
+</div>
+<div class="bg-[var(--neutral-white)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+<div class="flex items-center justify-center h-20 w-20 rounded-full bg-[var(--accent-color)] text-white mb-6">
+<svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.663 16.663C10.7937 17.7937 12.4437 18.5 14.25 18.5C17.5637 18.5 20.25 15.8137 20.25 12.5C20.25 9.18629 17.5637 6.5 14.25 6.5C12.4437 6.5 10.7937 7.20629 9.663 8.337" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M7.5 12C7.5 15.3137 4.81371 18 1.5 18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M11 5L12.5 6.5L14 5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M3 14L4.5 12.5L6 14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-2xl font-cartoon mb-2 text-[var(--primary-color)]">AI-Powered Recommendations</h3>
+<p class="text-[var(--text-color)]">Our AI analyzes your campaign data to identify optimization opportunities, performance trends, and actionable insights to improve your ad performance.</p>
+</div>
+<div class="bg-[var(--neutral-white)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+<div class="flex items-center justify-center h-20 w-20 rounded-full bg-[var(--accent-color)] text-white mb-6">
+<svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8V12L15 15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-2xl font-cartoon mb-2 text-[var(--primary-color)]">Real-Time Data Sync</h3>
+<p class="text-[var(--text-color)]">Automatically sync your ad performance data from all platforms. Stay updated with the latest metrics without manual data entry.</p>
+</div>
+<div class="bg-[var(--neutral-white)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+<div class="flex items-center justify-center h-20 w-20 rounded-full bg-[var(--accent-color)] text-white mb-6">
+<svg class="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"></path><path d="M14 2V8H20" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M12 18L12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9 18L9 15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 18V14" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-2xl font-cartoon mb-2 text-[var(--primary-color)]">Automated Reports</h3>
+<p class="text-[var(--text-color)]">Generate professional reports automatically. Share insights with stakeholders and clients with customizable, branded reports.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[var(--neutral-medium)]" id="data-preview">
+<div class="container mx-auto px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-cartoon text-[var(--primary-color)]">AI-Powered Insights & Reporting</h2>
+<p class="mt-4 text-lg text-[var(--text-color)] max-w-2xl mx-auto">Get actionable insights and automated reports powered by AI. Chat with Captain Guru for real-time analysis and optimization recommendations.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4 rounded-3xl border-4 border-white p-6 bg-[var(--neutral-light)] shadow-lg transform hover:scale-105 transition-transform duration-300">
+<p class="font-cartoon text-[var(--primary-color)] text-2xl">Campaign Performance</p>
+<div class="flex items-baseline gap-2">
+<p class="text-4xl font-bold text-green-500 font-cartoon">+15%</p>
+<p class="text-[var(--text-color)]">Average improvement</p>
+</div>
+<div class="h-48 flex items-end justify-between space-x-2">
+<div class="w-1/6 h-[70%] bg-[var(--accent-color)] rounded-t-lg animate-bounce" style="animation-delay: 0.1s;"></div>
+<div class="w-1/6 h-[30%] bg-[var(--accent-color)] rounded-t-lg animate-bounce" style="animation-delay: 0.2s;"></div>
+<div class="w-1/6 h-[85%] bg-[var(--accent-color)] rounded-t-lg animate-bounce" style="animation-delay: 0.3s;"></div>
+<div class="w-1/6 h-[50%] bg-[var(--accent-color)] rounded-t-lg animate-bounce" style="animation-delay: 0.4s;"></div>
+<div class="w-1/6 h-[60%] bg-[var(--accent-color)] rounded-t-lg animate-bounce" style="animation-delay: 0.5s;"></div>
+<div class="w-1/6 h-[95%] bg-green-400 rounded-t-lg animate-bounce" style="animation-delay: 0.6s;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-3xl border-4 border-white p-6 bg-[var(--neutral-light)] shadow-lg transform hover:scale-105 transition-transform duration-300">
+<p class="font-cartoon text-[var(--primary-color)] text-2xl">Engagement Metrics</p>
+<div class="flex items-baseline gap-2">
+<p class="text-4xl font-bold text-[var(--primary-color)] font-cartoon">+20%</p>
+<p class="text-[var(--text-color)]">Engagement increase</p>
+</div>
+<div class="h-48 flex items-center justify-center">
+<div class="relative w-40 h-40">
+<svg class="w-full h-full transform-gpu rotate-[-90deg]" viewBox="0 0 36 36"><path class="stroke-current text-gray-200/50" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="4"></path><path class="stroke-current text-[var(--secondary-color)] transition-all duration-1000 ease-out" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="80, 100" stroke-linecap="round" stroke-width="4"></path><path class="stroke-current text-[var(--accent-color)] transition-all duration-1000 ease-out" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="60, 100" stroke-dashoffset="-80" stroke-linecap="round" stroke-width="4"></path></svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center"><span class="text-3xl font-bold font-cartoon text-[var(--primary-color)]">60%</span><span class="text-sm text-[var(--text-color)]">Engagement</span></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-3xl border-4 border-white p-6 bg-[var(--neutral-light)] shadow-lg transform hover:scale-105 transition-transform duration-300">
+<p class="font-cartoon text-[var(--primary-color)] text-2xl">Cost Efficiency</p>
+<div class="flex items-baseline gap-2">
+<p class="text-4xl font-bold text-green-500 font-cartoon">-5%</p>
+<p class="text-[var(--text-color)]">Cost reduction</p>
+</div>
+<div class="h-48 flex items-end">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 50"><path d="M 0 40 Q 20 10, 40 30 T 80 25 T 100 15" fill="none" stroke="var(--accent-color)" stroke-linecap="round" stroke-width="4"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[var(--neutral-light)]" id="how-it-works">
+<div class="container mx-auto px-6 lg:px-8">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-cartoon text-[var(--primary-color)]">3 Easy Steps to Bliss</h2>
+<p class="mt-4 text-lg text-[var(--text-color)] max-w-2xl mx-auto">Getting started is as easy as a walk on the beach.</p>
+</div>
+<div class="relative">
+<div aria-hidden="true" class="hidden md:block absolute top-14 left-0 w-full h-1.5 bg-[var(--neutral-medium)] rounded-full"></div>
+<div aria-hidden="true" class="hidden md:block absolute top-14 left-0 w-full h-1.5 bg-[var(--secondary-color)] rounded-full animate-pulse"></div>
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="text-center">
+<div class="relative flex items-center justify-center w-28 h-28 mx-auto bg-[var(--accent-color)] rounded-full text-white text-5xl font-cartoon mb-6 shadow-lg border-4 border-white">1</div>
+<h3 class="text-2xl font-cartoon mb-2 text-[var(--primary-color)]">Plug In</h3>
+<p class="text-[var(--text-color)]">Connect your accounts with a few happy clicks. No sweat!</p>
+</div>
+<div class="text-center">
+<div class="relative flex items-center justify-center w-28 h-28 mx-auto bg-[var(--accent-color)] rounded-full text-white text-5xl font-cartoon mb-6 shadow-lg border-4 border-white">2</div>
+<h3 class="text-2xl font-cartoon mb-2 text-[var(--primary-color)]">Get Smart</h3>
+<p class="text-[var(--text-color)]">Our friendly AI buddy crunches the numbers and finds the fun stuff for you.</p>
+</div>
+<div class="text-center">
+<div class="relative flex items-center justify-center w-28 h-28 mx-auto bg-[var(--accent-color)] rounded-full text-white text-5xl font-cartoon mb-6 shadow-lg border-4 border-white">3</div>
+<h3 class="text-2xl font-cartoon mb-2 text-[var(--primary-color)]">Optimize &amp; Shine</h3>
+<p class="text-[var(--text-color)]">Get simple tips to make your ads awesome and your ROI soar like a kite.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gradient-to-b from-[#87CEEB] to-[#4A90E2] relative" id="platforms">
+<div class="absolute -top-1 left-0 w-full h-12">
+<svg viewBox="0 0 1200 100" preserveAspectRatio="none" class="w-full h-full">
+<path d="M0,50 Q150,20 300,50 T600,50 T900,50 T1200,50 L1200,0 L0,0 Z" fill="#fdf5e6"/>
+</svg>
+</div>
+<div class="absolute -bottom-1 left-0 w-full h-12">
+<svg viewBox="0 0 1200 100" preserveAspectRatio="none" class="w-full h-full">
+<path d="M0,30 Q200,60 400,30 T800,30 T1200,30 L1200,100 L0,100 Z" fill="#ffe8cc"/>
+</svg>
+</div>
+<div class="container mx-auto px-6 lg:px-8 relative z-10">
+<div class="text-center mb-12 relative z-10">
+<h2 class="text-5xl md:text-6xl font-cartoon text-white drop-shadow-lg">Pick Your Beach 🏝️</h2>
+<p class="mt-6 text-lg text-white max-w-2xl mx-auto drop-shadow">Ride the waves on every platform you love.</p>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-8 min-h-[150px]">
+<!-- Instagram -->
+<div class="transform -rotate-3 md:-rotate-6 translate-y-1 md:-translate-y-2 scale-95 hover:rotate-0 hover:translate-y-0 hover:scale-100 transition-all duration-300">
+<div class="bg-[var(--neutral-white)] p-6 rounded-3xl shadow-lg border-4 border-[var(--secondary-color)]">
+<img src="./assets/imgs/instagram.png" alt="Instagram" class="w-16 h-16 object-contain">
+</div>
+</div>
+<!-- LinkedIn -->
+<div class="transform rotate-1 md:rotate-3 translate-y-1 md:translate-y-3 scale-90 hover:rotate-0 hover:translate-y-0 hover:scale-100 transition-all duration-300">
+<div class="bg-[var(--neutral-white)] p-6 rounded-3xl shadow-lg border-4 border-[var(--accent-color)]">
+<img src="./assets/imgs/linkedin.png" alt="LinkedIn" class="w-16 h-16 object-contain">
+</div>
+</div>
+<!-- Snapchat -->
+<div class="transform -rotate-6 md:-rotate-12 translate-y-1 md:translate-y-2 scale-85 hover:rotate-0 hover:translate-y-0 hover:scale-100 transition-all duration-300">
+<div class="bg-[var(--neutral-white)] p-6 rounded-3xl shadow-lg border-4 border-[var(--primary-color)]">
+<img src="./assets/imgs/snapchat.png" alt="Snapchat" class="w-16 h-16 object-contain">
+</div>
+</div>
+<!-- TikTok -->
+<div class="transform scale-110 hover:scale-125 transition-all duration-300 z-10">
+<div class="bg-[var(--secondary-color)] p-6 rounded-3xl shadow-lg hover:shadow-xl border-4 border-white">
+<img src="./assets/imgs/tiktok.png" alt="TikTok" class="w-16 h-16 object-contain">
+</div>
+</div>
+<!-- Threads -->
+<div class="transform -rotate-1 md:-rotate-3 translate-y-1 md:-translate-y-1 scale-92 hover:rotate-0 hover:translate-y-0 hover:scale-100 transition-all duration-300">
+<div class="bg-[var(--neutral-white)] p-6 rounded-3xl shadow-lg border-4 border-[var(--accent-color)]">
+<img src="./assets/imgs/threads.png" alt="Threads" class="w-16 h-16 object-contain">
+</div>
+</div>
+<!-- Meta -->
+<div class="transform rotate-2 md:rotate-6 translate-y-1 md:translate-y-2 scale-88 hover:rotate-0 hover:translate-y-0 hover:scale-100 transition-all duration-300">
+<div class="bg-[var(--neutral-white)] p-6 rounded-3xl shadow-lg border-4 border-[var(--primary-color)]">
+<img src="./assets/imgs/meta.png" alt="Meta" class="w-16 h-16 object-contain">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-24 bg-[var(--neutral-medium)] flex flex-col items-center gap-8" id="demo">
+  <!-- Image: 2/3 width on mobile, ~30% on md+ screens -->
+  <img 
+    src="./assets/imgs/point.png" 
+    alt="Captain Guru pointing down" 
+    class="w-2/3 md:w-[30%] h-auto rounded-3xl"
+  >
+
+  <!-- Video: full width on mobile, ~80% on md+ screens -->
+  <video 
+    class="w-[80%] max-w-5xl h-auto rounded-3xl shadow-lg" 
+    controls
+    preload="metadata"
+    poster="./assets/imgs/thumbnail.png"
+  >
+    <source src="./assets/videos/demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+<section class="py-24 bg-[var(--neutral-light)]" id="pricing">
+<div class="container mx-auto px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-cartoon text-[var(--primary-color)]">Simple, Fun Pricing</h2>
+<p class="mt-4 text-lg text-[var(--text-color)] max-w-2xl mx-auto">Start with a 30-day free trial.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="bg-[var(--neutral-white)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+<h3 class="text-2xl font-cartoon text-[var(--primary-color)] mb-2">Brand Plan</h3>
+<p class="text-[var(--text-color)] text-sm mb-6">Perfect for individual brands</p>
+<div class="mb-8">
+<span class="text-lg text-green-600 font-bold">30 days free</span>
+<p class="mt-2">
+<span class="text-4xl font-bold text-[var(--primary-color)]">£35</span>
+<span class="text-[var(--text-color)] text-sm">/month after trial</span>
+</p>
+</div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">Connect up to 3 social accounts</span>
+</li>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">Basic analytics dashboard</span>
+</li>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">Monthly reports</span>
+</li>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">Email support</span>
+</li>
+</ul>
+<a href="https://dashboard.leadcap.guru/register" class="btn-secondary w-full flex items-center justify-center py-3 rounded-full font-bold">Start Now</a>
+</div>
+<div class="bg-[var(--neutral-white)] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 border-2 border-[var(--primary-color)]">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-2xl font-cartoon text-[var(--primary-color)]">Agency Plan</h3>
+<span class="bg-[var(--primary-color)] text-white text-xs font-bold px-3 py-1 rounded-full">Popular</span>
+</div>
+<p class="text-[var(--text-color)] text-sm mb-6">Ideal for agencies managing multiple clients</p>
+<div class="mb-8">
+<span class="text-lg text-green-600 font-bold">30 days free</span>
+<p class="mt-2">
+<span class="text-4xl font-bold text-[var(--primary-color)]">£110</span>
+<span class="text-[var(--text-color)] text-sm">/month after trial</span>
+</p>
+</div>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">Unlimited social accounts</span>
+</li>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">Advanced analytics dashboard</span>
+</li>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">Multi-client management</span>
+</li>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">White-label reports</span>
+</li>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">Priority support</span>
+</li>
+<li class="flex items-center gap-2">
+<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+<span class="text-[var(--text-color)]">API access</span>
+</li>
+</ul>
+<a href="https://dashboard.leadcap.guru/register" class="btn-primary w-full flex items-center justify-center py-3 rounded-full font-bold">Start Now</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS SECTION
+<section class="py-24 bg-gradient-to-br from-[#4ecdc4] to-[#42a5f5] text-white" id="testimonials">
+<div class="container mx-auto px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-cartoon">Happy Campers</h2>
+<p class="mt-4 text-lg text-white/90 max-w-2xl mx-auto">Hear what our pals are saying. Good vibes only!</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white/20 p-8 rounded-2xl shadow-lg backdrop-blur-sm transform hover:-rotate-2 transition-transform">
+<p class="mb-6 text-lg">"LeadCap.Guru is like a ray of sunshine for our ad strategy. The AI insights are pure gold and our conversions are up 25%! So cool!"</p>
+<div class="flex items-center">
+<img alt="Avatar of Sarah L." class="w-14 h-14 rounded-full mr-4 border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjyYioZ7uVU76Cdrnj4bUsGZSjY8Dv8g2fweT60rjc_eXosCYVysWXNOoH33sTcGAZVMGiYRW629Px8fGIMZQSNOdF2YFzkpvURUCs-fb-hjNO_AyzoH5THw8kmQlfy_LTKEJcA7XkTheQBtstdVFf8waY-8m0Yhtwt0dDjtA5jEzVnmMAKn6FTmnjQqmOCr_Jq2DG1g9k3ESUfrHOjA2gwypySISuoPZjWN-7yTQxVWVt_esVbpTkZSTxFsviKzoW6ukIEyEfL-cc"/>
+<div>
+<p class="font-bold text-xl">Sarah L.</p>
+<p class="text-sm text-white/80">Marketing Sunshine</p>
+</div>
+</div>
+</div>
+<div class="bg-white/20 p-8 rounded-2xl shadow-lg backdrop-blur-sm transform hover:rotate-2 transition-transform">
+<p class="mb-6 text-lg">"Our ROI is doing a happy dance! The automated reports are a lifesaver, freeing up so much time for... well, more dancing!"</p>
+<div class="flex items-center">
+<img alt="Avatar of David C." class="w-14 h-14 rounded-full mr-4 border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASBjmwJuCM4oFR48_5aCnxz0CN-KKLXyxLdaaHwAOMDA_T4gGMgPDKAqdgcd9dZfIFYKUOpUWGA1grhbnLILXBqGH94vuRJ6-isGErnwJcAx7IjiCxO-kx_LcdiI-7q9Hqav9NsovG2OQqtowFsPEjdj6vy0DYrWWMrxgTlIImtOTXhfdBs8JlAZtZmokiP9Jlcvcn665DNuthmN_kZCBbuGp-1sCKm8sCoqbYY8AZ4EW7lL1e8oGMNLfthcL7R8-YfIJcfxycvQlS"/>
+<div>
+<p class="font-bold text-xl">David C.</p>
+<p class="text-sm text-white/80">E-commerce Captain</p>
+</div>
+</div>
+</div>
+<div class="bg-white/20 p-8 rounded-2xl shadow-lg backdrop-blur-sm md:col-span-2 lg:col-span-1 transform hover:-rotate-1 transition-transform">
+<p class="mb-6 text-lg">"Having everything in one place is just amazing. It makes making good choices super fast and fun. Can't recommend it enough!"</p>
+<div class="flex items-center">
+<img alt="Avatar of Emily R." class="w-14 h-14 rounded-full mr-4 border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_33A8zAnr1ERqA8MTfNubO1MCWwfVDixng0Y0zzmGfgDxZ4zdntG1uozbgF3tbDJmdLju9IfUj-HBcRtvNzrOvO8L5i5p81fhmn3510QT-Ss93eLYY8YXe3VBCU2ssNbJGuTRL1QaYBL5p5urEp80b_mHq_fK3uBXCTo7a-CxBs0ynpyG26rOz4Gz73bkbF0VkkcXdZLmWd6TZpIVXflgzwjzHREHsHZdeVd_XRKtS0ZrO3CR5q1ou6WzXRfBZFMwYCi0OJqk4YSp"/>
+<div>
+<p class="font-bold text-xl">Emily R.</p>
+<p class="text-sm text-white/80">Social Media Star</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+END TESTIMONIALS SECTION -->
+<section class="py-24 bg-[var(--neutral-light)]" id="cta">
+<div class="container mx-auto px-6 lg:px-8 text-center">
+<h2 class="text-4xl md:text-5xl font-cartoon text-[var(--primary-color)]">Ready for an Ad Adventure?</h2>
+<p class="mt-4 text-lg text-[var(--text-color)] max-w-2xl mx-auto">Let's turn your data into delight. Your journey to ad mastery starts with a smile!</p>
+<a href="./waitlist.htm" class="btn-primary mt-12 flex min-w-[280px] max-w-md mx-auto cursor-pointer items-center justify-center overflow-hidden h-16 px-8 text-xl">
+<span class="truncate">Join the Waitlist</span>
+</a>
+</div>
+</section>
+</main>
+<footer class="bg-[var(--neutral-medium)]/50 text-[var(--text-color)]">
+<div class="container mx-auto px-6 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="flex items-center gap-3 text-[var(--primary-color)] mb-6 md:mb-0">
+<img src="./assets/imgs/logo.png" alt="logo" class="logo" />
+<h2 class="text-2xl font-cartoon text-[var(--dark-blue)]">LeadCap</h2>
+</div>
+<nav class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+<a class="text-sm hover:text-[var(--primary-color)] transition-colors" href="#features">Features</a>
+<a class="text-sm hover:text-[var(--primary-color)] transition-colors" href="#how-it-works">How It Works</a>
+<a class="text-sm hover:text-[var(--primary-color)] transition-colors" href="./TermsOfService/index.htm">Terms of Service</a>
+<a class="text-sm hover:text-[var(--primary-color)] transition-colors" href="./PrivacyPolicy/index.htm">Privacy Policy</a>
+</nav>
+<div class="flex gap-5">
+<a class="hover:text-[var(--primary-color)] transition-colors" href="https://x.com/leadcapguru" target="_blank"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.48 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.45,16.03 6.13,17.26 8.1,17.3C6.63,18.45 4.81,19.12 2.83,19.12C2.47,19.12 2.12,19.1 1.77,19.05C3.78,20.36 6.15,21.13 8.75,21.13C16.01,21.13 20.24,15.39 20.24,10.03C20.24,9.84 20.24,9.66 20.23,9.47C21.01,8.91 21.78,8.19 22.46,7.35V7.34L22.46,6Z"></path></svg></a>
+<a class="hover:text-[var(--primary-color)] transition-colors" href="https://www.facebook.com/profile.php?id=61579167795118" target="_blank"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.81C10.44 7.31 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10.01,10.01 0 0,0 12,2.04Z"></path></svg></a>
+<a class="hover:text-[var(--primary-color)] transition-colors" href="https://www.instagram.com/leadcaptainguru" target="_blank"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"></path></svg></a>
+<a class="hover:text-[var(--primary-color)] transition-colors" href="https://www.linkedin.com/showcase/leadcap-guru/" target="_blank"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.43 13,11.11V10.13H10.13V18.5H13V13.09C13,12.31 13.3,11.63 14.26,11.63C15.22,11.63 15.5,12.31 15.5,13.09V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,6 8,5.44 7.19,5.44C6.38,5.44 5.81,6 5.81,6.88C5.81,7.77 6.38,8.34 7.19,8.34H7.2V8.56H6.88Z M8.5,18.5V10.13H5.5V18.5H8.5Z"></path></svg></a>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-[var(--neutral-medium)] text-center text-sm">
+<p>© 2024 LeadCap.Guru. All rights reserved. Have a sunny day!</p>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>
