@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
 
 // FIX: outDir was '../blog-dist', pointing outside this project entirely -
 // Node resolves packages by walking up parent directories, so the
@@ -15,4 +16,7 @@ export default defineConfig({
   base: '/blog',
   outDir: './dist',
   integrations: [sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
