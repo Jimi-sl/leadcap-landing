@@ -1,0 +1,91 @@
+---
+const {
+  title,
+  description,
+  image = '/assets/imgs/logo.png',
+  canonicalURL = Astro.url,
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | LeadCap Blog</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:site_name" content="LeadCap.Guru" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+
+  <link rel="icon" type="image/png" href="/assets/imgs/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <style>
+    :root {
+      --primary-color: #ff8c42;
+      --secondary-color: #ffbc5b;
+      --accent-color: #4ecdc4;
+      --neutral-light: #fdf5e6;
+      --neutral-medium: #ffe8cc;
+      --text-color: #594a47;
+      --dark-blue: #0b208d;
+    }
+    body { font-family: 'Manrope', sans-serif; background-color: var(--neutral-light); color: var(--text-color); }
+    h1, h2, h3, .font-cartoon { font-family: 'Fredoka One', cursive; }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVT6MS50VF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PVT6MS50VF');
+  </script>
+</head>
+<body>
+  <header class="sticky top-0 z-50 flex items-center justify-between border-b border-[var(--neutral-medium)] bg-white/80 px-10 py-4 backdrop-blur-sm">
+    <div class="flex items-center gap-3">
+      <img src="/assets/imgs/logo.png" alt="LeadCap logo" class="w-8 h-8" />
+      <a href="/" class="text-2xl font-cartoon tracking-tight text-[var(--dark-blue)]">LeadCap</a>
+      <span class="text-[var(--primary-color)] font-cartoon text-xl">/ Blog</span>
+    </div>
+    <nav class="flex items-center gap-6">
+      <a href="/blog" class="text-sm font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors">All Posts</a>
+      <a href="/" class="text-sm font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors">← Back to LeadCap</a>
+      <a href="https://dashboard.leadcap.guru/register" class="bg-[var(--primary-color)] text-white font-bold rounded-full px-5 py-2 text-sm hover:bg-[#ff7a2e] transition-colors">Get Started</a>
+    </nav>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="bg-[var(--neutral-medium)]/50 text-[var(--text-color)] mt-24">
+    <div class="container mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <img src="/assets/imgs/logo.png" alt="logo" class="w-8 h-8" />
+        <span class="text-xl font-cartoon text-[var(--dark-blue)]">LeadCap</span>
+      </div>
+      <p class="text-sm">© {new Date().getFullYear()} LeadCap.Guru. All rights reserved.</p>
+      <a href="https://dashboard.leadcap.guru/register" class="bg-[var(--primary-color)] text-white font-bold rounded-full px-5 py-2 text-sm hover:bg-[#ff7a2e] transition-colors">
+        Start Free Trial
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

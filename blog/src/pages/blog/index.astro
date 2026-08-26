@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllPosts } from '../../lib/contentful.js';
+
+const posts = await getAllPosts();
+---
+<Base
+  title="Blog"
+  description="Tips, guides, and insights on social media advertising analytics from the LeadCap team."
+>
+  <section class="container mx-auto px-6 lg:px-8 py-20">
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-cartoon text-[var(--primary-color)]">The LeadCap Blog</h1>
+      <p class="mt-4 text-lg text-[var(--text-color)] max-w-xl mx-auto">
+        Tips, guides, and insights on social media ad analytics.
+      </p>
+    </div>
+
+    {posts.length === 0 && (
+      <p class="text-center text-[var(--text-color)]">No posts yet. Check back soon!</p>
+    )}
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {posts.map((post) => (
+        <a
+          href={`/blog/${post.fields.slug}`}
+          class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
+        >
+          {post.fields.coverImage && (
+            <img
+              src={`https:${post.fields.coverImage.fields.file.url}?w=600&h=340&fit=fill`}
+              alt={post.fields.coverImage.fields.title}
+              width="600"
+              height="340"
+              class="w-full object-cover"
+              loading="lazy"
+            />
+          )}
+          <div class="p-6">
+            <p class="text-xs text-[var(--accent-color)] font-bold uppercase tracking-widest mb-2">
+              {new Date(post.fields.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </p>
+            <h2 class="text-xl font-cartoon text-[var(--primary-color)] group-hover:underline mb-2">
+              {post.fields.title}
+            </h2>
+            <p class="text-sm text-[var(--text-color)] line-clamp-3">{post.fields.excerpt}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllPosts, getPostBySlug } from '../../lib/contentful.js';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({ params: { slug: post.fields.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await getPostBySlug(slug);
+
+if (!post) return Astro.redirect('/blog');
+
+const contentHtml = documentToHtmlString(post.fields.body);
+const coverUrl = post.fields.coverImage
+  ? `https:${post.fields.coverImage.fields.file.url}?w=1200&h=630&fit=fill`
+  : '/assets/imgs/logo.png';
+---
+<Base
+  title={post.fields.title}
+  description={post.fields.excerpt}
+  image={coverUrl}
+  canonicalURL={new URL(`/blog/${slug}`, Astro.site)}
+>
+  <article class="container mx-auto px-6 lg:px-8 py-20 max-w-3xl">
+    <header class="mb-10">
+      <p class="text-xs text-[var(--accent-color)] font-bold uppercase tracking-widest mb-3">
+        {new Date(post.fields.publishedDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+      </p>
+      <h1 class="text-4xl md:text-5xl font-cartoon text-[var(--primary-color)] leading-tight mb-4">
+        {post.fields.title}
+      </h1>
+      <p class="text-lg text-[var(--text-color)]">{post.fields.excerpt}</p>
+    </header>
+
+    {post.fields.coverImage && (
+      <img
+        src={coverUrl}
+        alt={post.fields.coverImage.fields.title}
+        width="1200"
+        height="630"
+        class="w-full rounded-2xl shadow-lg mb-10 object-cover"
+      />
+    )}
+
+    <div class="prose prose-lg max-w-none
+      prose-headings:font-cartoon prose-headings:text-[var(--primary-color)]
+      prose-a:text-[var(--accent-color)] prose-a:no-underline hover:prose-a:underline
+      prose-img:rounded-xl prose-img:shadow-md"
+      set:html={contentHtml}
+    />
+
+    <!-- CTA -->
+    <div class="mt-16 bg-[var(--neutral-medium)] rounded-2xl p-8 text-center">
+      <h2 class="text-2xl font-cartoon text-[var(--primary-color)] mb-2">Ready to unify your ad analytics?</h2>
+      <p class="text-[var(--text-color)] mb-6">Start your 30-day free trial — no credit card required.</p>
+      <a
+        href="https://dashboard.leadcap.guru/register"
+        class="bg-[var(--primary-color)] text-white font-bold rounded-full px-8 py-3 hover:bg-[#ff7a2e] transition-colors"
+      >
+        Get Started Free
+      </a>
+    </div>
+  </article>
+</Base>
