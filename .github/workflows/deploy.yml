@@ -45,6 +45,11 @@ jobs:
           cp -r assets _site/
           cp *.htm _site/ 2>/dev/null || true
           cp CNAME _site/
+          # FIX: `cp *.htm` is a flat glob - it never copied PrivacyPolicy/
+          # or TermsOfService/, so both pages 404'd on the live site since
+          # the very first deploy. Copying these subdirectories explicitly.
+          cp -r PrivacyPolicy _site/
+          cp -r TermsOfService _site/
           # Astro's `base: '/blog'` config prefixes internal links, but
           # doesn't change where files physically land - that's driven by
           # the actual src/pages/blog/... structure, which already builds

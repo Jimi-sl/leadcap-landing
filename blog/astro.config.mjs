@@ -21,10 +21,29 @@ import tailwindcss from '@tailwindcss/vite';
 // link 404'd because of exactly this mismatch. Canonical URLs already
 // hardcode `/blog/` explicitly where needed (see [slug].astro), so nothing
 // depends on this config.
+// The sitemap this generates covers the whole domain, not just the blog -
+// deploy.yml assembles this project's dist/ together with the static
+// landing site (index.htm, waitlist.htm, PrivacyPolicy/, TermsOfService/)
+// into one _site/, so the sitemap output lands at the real site root too.
+// Blog posts are picked up automatically as Astro's own routes (dynamic -
+// new Contentful posts appear here on their own, no manual edits needed);
+// the static landing pages live outside this Astro project entirely, so
+// they're listed explicitly via customPages. Excludes pricing-section.htm
+// deliberately - it's an orphaned fragment, not a real navigable page, and
+// its content duplicates index.htm's own pricing section.
 export default defineConfig({
   site: 'https://leadcap.guru',
   outDir: './dist',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      customPages: [
+        'https://leadcap.guru/',
+        'https://leadcap.guru/waitlist.htm',
+        'https://leadcap.guru/PrivacyPolicy/',
+        'https://leadcap.guru/TermsOfService/',
+      ],
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
