@@ -2,3 +2,5 @@ node_modules/
 dist/
 .env
 .astro/
+CONTENT-ROADMAP.md
+draft-tiktok-ads-performance.md
