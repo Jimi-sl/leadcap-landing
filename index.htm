@@ -3,6 +3,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>LeadCap.Guru - Social Media Ad Analytics</title>
+<link rel="canonical" href="https://leadcap.guru/"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
@@ -25,6 +26,71 @@
 <meta name="description" content="Your friendly guru for cruising through TikTok, Instagram, Meta, and all the ad beaches in between. Get unified analytics and AI-powered insights.">
 <meta name="keywords" content="social media analytics, TikTok ads, Instagram ads, Meta ads, Facebook ads, ad analytics, social media marketing">
 <meta name="author" content="LeadCap.Guru">
+
+<!-- Organization schema - real facts only (name/url/logo/description already
+     used elsewhere on this page, sameAs links to the actual verified social
+     profiles linked in the footer below) - helps both Google and AI answer
+     engines resolve "LeadCap.Guru" as a known entity rather than guessing. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "LeadCap.Guru",
+  "url": "https://leadcap.guru",
+  "logo": "https://leadcap.guru/assets/imgs/logo.png",
+  "description": "Your friendly guru for cruising through TikTok, Instagram, Meta, and all the ad beaches in between. Get unified analytics and AI-powered insights.",
+  "sameAs": [
+    "https://x.com/leadcapguru",
+    "https://www.facebook.com/profile.php?id=61579167795118",
+    "https://www.instagram.com/leadcaptainguru",
+    "https://www.linkedin.com/showcase/leadcap-guru/"
+  ]
+}
+</script>
+
+<!-- FAQPage schema - mirrors the visible #faq section below word for word.
+     Keep both in sync if the FAQ copy ever changes. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which ad platforms does LeadCap support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LeadCap connects ad accounts across Meta, TikTok, LinkedIn, Snapchat, and X, and brings their performance data together into one unified dashboard instead of you logging into each platform's native ads manager separately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free trial, and do I need a card to sign up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes - every plan starts with a 30-day free trial. A card is required at signup, but you won't be charged until day 30, so you have the full trial period to decide before any payment is taken."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between the Brand and Agency plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Brand Plan (£35/month after trial) is built for a single brand, with up to 3 connected social accounts and a basic analytics dashboard. The Agency Plan (£110/month after trial) supports unlimited connected accounts and multi-client management, with white-label reports, priority support, and API access - built for agencies managing several clients at once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does LeadCap use AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes - Captain Guru, LeadCap's built-in AI assistant, summarizes your ad performance and answers questions about your spend, reach, and engagement across every connected platform, right from the dashboard."
+      }
+    }
+  ]
+}
+</script>
+
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link rel="icon" type="image/png" href="./assets/imgs/logo.png"/>
@@ -80,6 +146,7 @@
 <a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors" href="#how-it-works">How It Works</a>
 <!-- <a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors" href="#testimonials">Testimonials</a> -->
 <a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors" href="#pricing">Pricing</a>
+<a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors" href="#faq">FAQ</a>
 <a class="text-base font-medium text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors" href="/blog">Blog</a>
 </nav>
 <div class="flex items-center gap-4">
@@ -380,6 +447,49 @@
 </ul>
 <a href="https://dashboard.leadcap.guru/register" class="btn-primary w-full flex items-center justify-center py-3 rounded-full font-bold">Start Now</a>
 </div>
+</div>
+</div>
+</section>
+
+<!-- FAQ - real answers matching the pricing/features copy above, not
+     invented content. Backed by matching FAQPage JSON-LD in <head> -
+     Google requires structured data to match visible content, and it's
+     useless for AI citation otherwise since there'd be no real text to
+     draw from. -->
+<section class="py-24 bg-[var(--neutral-white)]" id="faq">
+<div class="container mx-auto px-6 lg:px-8 max-w-3xl">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-cartoon text-[var(--primary-color)]">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<details class="group bg-[var(--neutral-light)] rounded-2xl p-6 open:shadow-md transition-shadow">
+<summary class="flex items-center justify-between cursor-pointer font-bold text-lg text-[var(--text-color)]">
+Which ad platforms does LeadCap support?
+<span class="text-[var(--primary-color)] text-2xl leading-none group-open:rotate-45 transition-transform">+</span>
+</summary>
+<p class="mt-4 text-[var(--text-color)]">LeadCap connects ad accounts across Meta, TikTok, LinkedIn, Snapchat, and X, and brings their performance data together into one unified dashboard instead of you logging into each platform's native ads manager separately.</p>
+</details>
+<details class="group bg-[var(--neutral-light)] rounded-2xl p-6 open:shadow-md transition-shadow">
+<summary class="flex items-center justify-between cursor-pointer font-bold text-lg text-[var(--text-color)]">
+Is there a free trial, and do I need a card to sign up?
+<span class="text-[var(--primary-color)] text-2xl leading-none group-open:rotate-45 transition-transform">+</span>
+</summary>
+<p class="mt-4 text-[var(--text-color)]">Yes - every plan starts with a 30-day free trial. A card is required at signup, but you won't be charged until day 30, so you have the full trial period to decide before any payment is taken.</p>
+</details>
+<details class="group bg-[var(--neutral-light)] rounded-2xl p-6 open:shadow-md transition-shadow">
+<summary class="flex items-center justify-between cursor-pointer font-bold text-lg text-[var(--text-color)]">
+What's the difference between the Brand and Agency plans?
+<span class="text-[var(--primary-color)] text-2xl leading-none group-open:rotate-45 transition-transform">+</span>
+</summary>
+<p class="mt-4 text-[var(--text-color)]">The Brand Plan (£35/month after trial) is built for a single brand, with up to 3 connected social accounts and a basic analytics dashboard. The Agency Plan (£110/month after trial) supports unlimited connected accounts and multi-client management, with white-label reports, priority support, and API access - built for agencies managing several clients at once.</p>
+</details>
+<details class="group bg-[var(--neutral-light)] rounded-2xl p-6 open:shadow-md transition-shadow">
+<summary class="flex items-center justify-between cursor-pointer font-bold text-lg text-[var(--text-color)]">
+Does LeadCap use AI?
+<span class="text-[var(--primary-color)] text-2xl leading-none group-open:rotate-45 transition-transform">+</span>
+</summary>
+<p class="mt-4 text-[var(--text-color)]">Yes - Captain Guru, LeadCap's built-in AI assistant, summarizes your ad performance and answers questions about your spend, reach, and engagement across every connected platform, right from the dashboard.</p>
+</details>
 </div>
 </div>
 </section>

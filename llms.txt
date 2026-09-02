@@ -1,0 +1,16 @@
+# LeadCap.Guru
+
+> LeadCap.Guru is a unified social media ad analytics dashboard for marketers and agencies. It connects ad accounts across Meta, TikTok, LinkedIn, Snapchat, and X into a single dashboard, with AI-powered insights ("Captain Guru") that summarize performance and answer questions about spend, reach, and engagement across platforms - instead of logging into each platform's native ads manager separately.
+
+## Product
+
+- [Homepage](https://leadcap.guru/): product overview and features
+- [Pricing](https://leadcap.guru/#pricing): plan details
+- [Register](https://dashboard.leadcap.guru/register): start a free trial (a card is required at signup; the first charge happens on day 30, not before)
+- [Login](https://dashboard.leadcap.guru/login): existing customer sign-in
+- [Privacy Policy](https://leadcap.guru/PrivacyPolicy/)
+- [Terms of Service](https://leadcap.guru/TermsOfService/)
+
+## Blog
+
+- [Blog](https://leadcap.guru/blog/): articles on social ad performance and platform-specific analytics guidance, published weekly

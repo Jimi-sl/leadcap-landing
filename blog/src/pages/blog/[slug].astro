@@ -16,14 +16,38 @@ if (!post) return Astro.redirect('/blog');
 const contentHtml = documentToHtmlString(post.fields.body);
 const coverUrl = post.fields.coverImage
   ? `https:${post.fields.coverImage.fields.file.url}?w=1200&h=630&fit=fill`
-  : '/assets/imgs/logo.png';
+  : 'https://leadcap.guru/assets/imgs/logo.png';
+const canonicalURL = new URL(`/blog/${slug}`, Astro.site);
+
+// BlogPosting schema - built entirely from real Contentful fields already
+// fetched above, no invented data. No separate "updated" field exists in
+// the content model, so dateModified falls back to publishedDate rather
+// than guessing. author/publisher are the Organization itself since posts
+// aren't bylined to an individual writer.
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.fields.title,
+  description: post.fields.excerpt,
+  image: coverUrl,
+  datePublished: post.fields.publishedDate,
+  dateModified: post.fields.publishedDate,
+  mainEntityOfPage: canonicalURL.toString(),
+  author: { '@type': 'Organization', name: 'LeadCap.Guru', url: 'https://leadcap.guru' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'LeadCap.Guru',
+    logo: { '@type': 'ImageObject', url: 'https://leadcap.guru/assets/imgs/logo.png' }
+  }
+};
 ---
 <Base
   title={post.fields.title}
   description={post.fields.excerpt}
   image={coverUrl}
-  canonicalURL={new URL(`/blog/${slug}`, Astro.site)}
+  canonicalURL={canonicalURL}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <article class="container mx-auto px-6 lg:px-8 py-20 max-w-3xl">
     <header class="mb-10">
       <p class="text-xs text-[var(--accent-color)] font-bold uppercase tracking-widest mb-3">
@@ -55,7 +79,7 @@ const coverUrl = post.fields.coverImage
     <!-- CTA -->
     <div class="mt-16 bg-[var(--neutral-medium)] rounded-2xl p-8 text-center">
       <h2 class="text-2xl font-cartoon text-[var(--primary-color)] mb-2">Ready to unify your ad analytics?</h2>
-      <p class="text-[var(--text-color)] mb-6">Start your 30-day free trial — you won't be charged until day 30.</p>
+      <p class="text-[var(--text-color)] mb-6">Start your 30-day free trial: you won't be charged until day 30.</p>
       <a
         href="https://dashboard.leadcap.guru/register"
         class="bg-[var(--primary-color)] text-white font-bold rounded-full px-8 py-3 hover:bg-[#ff7a2e] transition-colors"
