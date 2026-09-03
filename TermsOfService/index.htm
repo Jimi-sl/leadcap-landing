@@ -21,7 +21,9 @@
 
 <!-- General -->
 <meta name="description" content="Terms of Service for LeadCap.Guru - Your friendly social media ad analytics platform. Review our terms for using our TikTok, Instagram, and Meta ad analytics tools.">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- See ../index.htm for why this replaced the cdn.tailwindcss.com script +
+     runtime style block (render-blocking script, Lighthouse FCP finding). -->
+<link rel="stylesheet" href="../assets/css/terms.css"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link rel="icon" type="image/png" href="./../assets/imgs/logo.png"/>
 <link rel="apple-touch-icon" href="./../assets/imgs/logo.png"/>
@@ -40,45 +42,6 @@
   gtag('config', 'G-PVT6MS50VF');
 </script>
 
-<style type="text/tailwindcss">
-        :root {
-            --primary-color: #f49725;
-            --secondary-color: #f5f2f0;
-            --text-primary: #181511;
-            --text-secondary: #8a7760;
-            --background-color: #ffffff;
-            --border-color: #e6e1db;
-            --dark-blue: #0b208d;
-        }
-        body {
-          font-family: 'Manrope', sans-serif;
-        }
-        h1, h2, h3, .font-cartoon {
-            font-family: 'Fredoka One', cursive;
-        }
-        .logo {
-            width: 32px;
-            height: 32px;
-        }
-        .primary-button {
-            @apply bg-[var(--primary-color)] text-white;
-        }
-        .primary-bg {
-            @apply bg-[var(--primary-color)];
-        }
-        .secondary-bg {
-            @apply bg-[var(--secondary-color)];
-        }
-        .text-primary {
-            @apply text-[var(--text-primary)];
-        }
-        .text-secondary {
-            @apply text-[var(--text-secondary)];
-        }
-        .border-color {
-            @apply border-[var(--border-color)];
-        }
-    </style>
 </head>
 <body class="bg-[var(--background-color)]">
 <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">

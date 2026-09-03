@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+/* Scanning all four pages (not just this one) so any page can share this
+   build's utility classes without risk of a class being missed - a few
+   extra unused KB per page is a fine trade for a small marketing site,
+   versus maintaining four separately-scoped source lists. */
+@source "../index.htm";
+@source "../waitlist.htm";
+@source "../PrivacyPolicy/index.htm";
+@source "../TermsOfService/index.htm";
+
+:root {
+  --primary-color: #ff8c42;
+  --secondary-color: #ffbc5b;
+  --accent-color: #4ecdc4;
+  --neutral-white: #ffffff;
+  --neutral-light: #fdf5e6;
+  --neutral-medium: #ffe8cc;
+  --neutral-dark: #6b4f4f;
+  --text-color: #594a47;
+  --dark-blue: #0b208d;
+}
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--neutral-light);
+  color: var(--text-color);
+}
+.logo {
+  width: 32px;
+  height: 32px;
+}
+h1, h2, h3, .font-cartoon {
+  font-family: 'Fredoka One', cursive;
+}
+.hero-gradient {
+  background: linear-gradient(180deg, #ffbc5b 0%, #ff8c42 100%);
+}
+.btn-primary {
+  @apply bg-[var(--primary-color)] text-white font-bold rounded-full shadow-lg hover:bg-[#ff7a2e] transition-all duration-300 transform hover:-translate-y-1;
+}
+.btn-secondary {
+  @apply bg-[var(--secondary-color)] text-[var(--text-color)] font-bold rounded-full shadow-lg hover:bg-[#ffae4a] transition-all duration-300 transform hover:-translate-y-1;
+}

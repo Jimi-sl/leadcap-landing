@@ -28,48 +28,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<style type="text/tailwindcss">
-        :root {
-            --primary-color: #f49725;
-            --background-color: #ffffff;
-            --text-primary: #181511;
-            --text-secondary: #8a7760;
-            --border-color: #f5f2f0;
-            --accent-color: #fafafa;
-            --dark-blue: #0b208d;
-        }
-        body {
-            font-family: 'Manrope', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-primary);
-        }
-        h1, h2, h3, .font-cartoon {
-            font-family: 'Fredoka One', cursive;
-        }
-        .logo {
-            width: 32px;
-            height: 32px;
-        }
-        .primary-button {
-            @apply bg-[var(--primary-color)] text-white;
-        }
-        .header {
-            @apply bg-[var(--background-color)] border-b border-[var(--border-color)];
-        }
-        .footer {
-            @apply bg-[var(--background-color)] border-t border-[var(--border-color)];
-        }
-        .accordion-item {
-            @apply bg-[var(--accent-color)] border border-[var(--border-color)] rounded-lg;
-        }
-        .accordion-summary {
-            @apply text-[var(--text-primary)] font-medium;
-        }
-        .accordion-content {
-            @apply text-[var(--text-secondary)] ;
-        }
-    </style>
+<!-- See ../index.htm for why this replaced the cdn.tailwindcss.com script +
+     runtime style block (render-blocking script, Lighthouse FCP finding). -->
+<link rel="stylesheet" href="../assets/css/privacy.css"/>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVT6MS50VF"></script>
 <script>

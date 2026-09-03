@@ -96,33 +96,13 @@
 <link rel="icon" type="image/png" href="./assets/imgs/logo.png"/>
 <link rel="apple-touch-icon" href="./assets/imgs/logo.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<style type="text/tailwindcss">
-    :root {
-      --primary-color: #ff8c42;--secondary-color: #ffbc5b;--accent-color: #4ecdc4;--neutral-white: #ffffff;
-      --neutral-light: #fdf5e6;--neutral-medium: #ffe8cc;--neutral-dark: #6b4f4f;--text-color: #594a47; --dark-blue: #0b208d;}
-    body {
-      font-family: 'Manrope', sans-serif;
-      background-color: var(--neutral-light);
-      color: var(--text-color);
-    }
-    .logo {
-        width: 32px;
-        height: 32px;
-    }
-    h1, h2, h3, .font-cartoon {
-        font-family: 'Fredoka One', cursive;
-    }
-    .hero-gradient {
-        background: linear-gradient(180deg, #ffbc5b 0%, #ff8c42 100%);
-    }
-    .btn-primary {
-        @apply bg-[var(--primary-color)] text-white font-bold rounded-full shadow-lg hover:bg-[#ff7a2e] transition-all duration-300 transform hover:-translate-y-1;
-    }
-    .btn-secondary {
-        @apply bg-[var(--secondary-color)] text-[var(--text-color)] font-bold rounded-full shadow-lg hover:bg-[#ffae4a] transition-all duration-300 transform hover:-translate-y-1;
-    }
-  </style>
+<!-- Was a synchronous cdn.tailwindcss.com <script> (render-blocking - flagged
+     by Lighthouse as delaying First Contentful Paint) plus a runtime
+     type="text/tailwindcss" style block. Replaced with a real build-time
+     compile (styles/index.css -> assets/css/index.css, see package.json's
+     build:css / deploy.yml) - a plain stylesheet link, no blocking script,
+     no runtime compilation, no flash of unstyled content. -->
+<link rel="stylesheet" href="./assets/css/index.css"/>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PVT6MS50VF"></script>
 <script>

@@ -26,7 +26,21 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: blog/package-lock.json
+          cache-dependency-path: |
+            blog/package-lock.json
+            package-lock.json
+
+      - name: Install landing page dependencies
+        run: npm ci
+
+      - name: Build landing page CSS
+        # Compiles Tailwind at build time for index.htm/waitlist.htm/
+        # PrivacyPolicy/TermsOfService instead of the old cdn.tailwindcss.com
+        # <script> - that was a render-blocking script flagged by Lighthouse
+        # as delaying First Contentful Paint (and the CDN approach isn't
+        # meant for production anyway - same reasoning as the blog's earlier
+        # move off the CDN script to @tailwindcss/vite).
+        run: npm run build:css
 
       - name: Install blog dependencies
         working-directory: blog

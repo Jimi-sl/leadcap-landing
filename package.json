@@ -1,0 +1,12 @@
+{
+  "name": "leadcap-landing",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i styles/index.css -o assets/css/index.css --minify && tailwindcss -i styles/waitlist.css -o assets/css/waitlist.css --minify && tailwindcss -i styles/privacy.css -o assets/css/privacy.css --minify && tailwindcss -i styles/terms.css -o assets/css/terms.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/forms": "^0.5.10",
+    "tailwindcss": "^4.3.3"
+  }
+}

@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@source "../index.htm";
+@source "../waitlist.htm";
+@source "../PrivacyPolicy/index.htm";
+@source "../TermsOfService/index.htm";
+
+:root {
+  --primary-color: #f49725;
+  --secondary-color: #f5f2f0;
+  --text-primary: #181511;
+  --text-secondary: #8a7760;
+  --background-color: #ffffff;
+  --border-color: #e6e1db;
+  --dark-blue: #0b208d;
+}
+body {
+  font-family: 'Manrope', sans-serif;
+}
+h1, h2, h3, .font-cartoon {
+  font-family: 'Fredoka One', cursive;
+}
+.logo {
+  width: 32px;
+  height: 32px;
+}
+.primary-button {
+  @apply bg-[var(--primary-color)] text-white;
+}
+.primary-bg {
+  @apply bg-[var(--primary-color)];
+}
+.secondary-bg {
+  @apply bg-[var(--secondary-color)];
+}
+.text-primary {
+  @apply text-[var(--text-primary)];
+}
+.text-secondary {
+  @apply text-[var(--text-secondary)];
+}
+.border-color {
+  @apply border-[var(--border-color)];
+}

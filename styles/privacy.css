@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@source "../index.htm";
+@source "../waitlist.htm";
+@source "../PrivacyPolicy/index.htm";
+@source "../TermsOfService/index.htm";
+
+:root {
+  --primary-color: #f49725;
+  --background-color: #ffffff;
+  --text-primary: #181511;
+  --text-secondary: #8a7760;
+  --border-color: #f5f2f0;
+  --accent-color: #fafafa;
+  --dark-blue: #0b208d;
+}
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+h1, h2, h3, .font-cartoon {
+  font-family: 'Fredoka One', cursive;
+}
+.logo {
+  width: 32px;
+  height: 32px;
+}
+.primary-button {
+  @apply bg-[var(--primary-color)] text-white;
+}
+.header {
+  @apply bg-[var(--background-color)] border-b border-[var(--border-color)];
+}
+.footer {
+  @apply bg-[var(--background-color)] border-t border-[var(--border-color)];
+}
+.accordion-item {
+  @apply bg-[var(--accent-color)] border border-[var(--border-color)] rounded-lg;
+}
+.accordion-summary {
+  @apply text-[var(--text-primary)] font-medium;
+}
+.accordion-content {
+  @apply text-[var(--text-secondary)];
+}
