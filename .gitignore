@@ -3,3 +3,7 @@ node_modules/
 # Compiled at deploy time (see package.json's build:css / deploy.yml) -
 # same convention as blog/dist, not committed.
 assets/css/*.css
+
+# Local working docs - not meant for the remote repo
+LAUNCH-PLATFORMS.md
+SaaS Launch Platforms .xlsx
