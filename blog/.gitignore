@@ -3,4 +3,5 @@ dist/
 .env
 .astro/
 CONTENT-ROADMAP.md
-draft-tiktok-ads-performance.md
+# All blog-post drafts, current and future - not just the TikTok one.
+draft-*.md
