@@ -46,6 +46,19 @@ jobs:
         working-directory: blog
         run: npm ci
 
+      - name: Wait for Contentful CDN propagation
+        # FIX: confirmed live 2026-09-21 - the webhook fires within ~3s of a
+        # Contentful publish, but the Content Delivery API's CDN can lag
+        # slightly behind that. A build that queries getAllPosts() in that
+        # window gets a stale read missing the just-published entry, with no
+        # error - getStaticPaths just silently returns one fewer path, so
+        # the run reports success while quietly missing the new post. A
+        # rebuild minutes later works fine since propagation has caught up
+        # by then. Only matters on the webhook-triggered path - push/manual
+        # runs aren't racing a publish that just happened.
+        if: github.event_name == 'repository_dispatch'
+        run: sleep 20
+
       - name: Build Astro blog
         working-directory: blog
         env:
