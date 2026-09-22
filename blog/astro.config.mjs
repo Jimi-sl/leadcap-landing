@@ -38,7 +38,9 @@ export default defineConfig({
     sitemap({
       customPages: [
         'https://leadcap.guru/',
-        'https://leadcap.guru/waitlist.htm',
+        // waitlist.htm deliberately excluded - noindexed now that
+        // registration is open, keeping it in the sitemap would contradict
+        // that signal. The page itself still exists (old links don't 404).
         'https://leadcap.guru/PrivacyPolicy/',
         'https://leadcap.guru/TermsOfService/',
       ],

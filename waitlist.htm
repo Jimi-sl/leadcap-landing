@@ -3,23 +3,32 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Join the Waitlist - LeadCap.Guru</title>
+<title>LeadCap.Guru is Live</title>
+
+<!-- FIX: this page's whole purpose (collect an email, notify later) is
+     obsolete now that registration is open, and its form POSTed to a
+     devtunnel URL that's confirmed dead (404) - anyone who tried to submit
+     recently hit a silent failure. Kept the URL itself alive (old
+     links/bookmarks shouldn't 404), replaced the form with a direct link to
+     registration, and noindexed it - it's not a page worth new search
+     traffic landing on when the real registration flow exists. -->
+<meta name="robots" content="noindex, nofollow">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://leadcap.guru/waitlist">
-<meta property="og:title" content="Join the Waitlist - LeadCap.Guru">
-<meta property="og:description" content="Be the first to experience the future of social media ad analytics. Join our exclusive waitlist and get early access to LeadCap.Guru.">
+<meta property="og:title" content="LeadCap.Guru is Live">
+<meta property="og:description" content="LeadCap unifies your Meta, TikTok, LinkedIn, Snapchat, and X ad performance into one dashboard. Start your 30-day free trial.">
 <meta property="og:image" content="./assets/imgs/logo.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://leadcap.guru/waitlist">
-<meta property="twitter:title" content="Join the Waitlist - LeadCap.Guru">
-<meta property="twitter:description" content="Be the first to experience the future of social media ad analytics. Join our exclusive waitlist and get early access to LeadCap.Guru.">
+<meta property="twitter:title" content="LeadCap.Guru is Live">
+<meta property="twitter:description" content="LeadCap unifies your Meta, TikTok, LinkedIn, Snapchat, and X ad performance into one dashboard. Start your 30-day free trial.">
 <meta property="twitter:image" content="./assets/imgs/logo.png">
 
-<meta name="description" content="Be the first to experience the future of social media ad analytics. Join our exclusive waitlist and get early access to LeadCap.Guru.">
+<meta name="description" content="LeadCap unifies your Meta, TikTok, LinkedIn, Snapchat, and X ad performance into one dashboard. Start your 30-day free trial.">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link rel="icon" type="image/png" href="./assets/imgs/logo.png"/>
@@ -66,102 +75,22 @@
 <div class="container mx-auto px-6 lg:px-8 py-20 text-center relative z-10">
 <div class="max-w-4xl mx-auto">
 <h1 class="text-5xl md:text-7xl font-cartoon leading-tight tracking-wider drop-shadow-lg mb-8">
-Join the Waitlist
+LeadCap is Live
 </h1>
 <p class="text-xl md:text-2xl font-light leading-relaxed drop-shadow-md mb-12 max-w-3xl mx-auto">
-Be the first to experience the future of social media ad analytics. Get exclusive early access to LeadCap.Guru and revolutionize your marketing campaigns.
+Thanks for your interest in LeadCap.Guru. The wait's over, unify your Meta, TikTok, LinkedIn, Snapchat, and X ad performance into one dashboard, starting today.
 </p>
 
-<!-- Waitlist Form -->
 <div class="max-w-md mx-auto bg-white/20 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
-<form id="waitlistForm" class="space-y-6">
-<div>
-<input 
-type="email" 
-id="email" 
-name="email" 
-placeholder="Enter your email address" 
-required
-class="w-full px-6 py-4 rounded-full border-2 border-white/30 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:border-white focus:bg-white/20 transition-all duration-300"
-/>
-</div>
-<div>
-<select 
-id="userType" 
-name="userType" 
-required
-class="w-full px-6 py-4 rounded-full border-2 border-white/30 bg-white/10 text-white focus:outline-none focus:border-white focus:bg-white/20 transition-all duration-300"
->
-<option value="" disabled selected class="text-gray-800">I am a...</option>
-<option value="brand" class="text-gray-800">Brand/Business Owner</option>
-<option value="agency" class="text-gray-800">Marketing Agency</option>
-<option value="freelancer" class="text-gray-800">Freelance Marketer</option>
-<option value="other" class="text-gray-800">Other</option>
-</select>
-</div>
-<button 
-type="submit" 
-class="w-full btn-secondary py-4 px-8 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105"
->
-Join the Waitlist
-</button>
-</form>
-
-<!-- Success Message -->
-<div id="successMessage" class="success-message mt-6 p-6 bg-green-500/20 border-2 border-green-400 rounded-2xl">
-<div class="flex items-center justify-center mb-4">
-<svg class="w-12 h-12 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-</svg>
-</div>
-<h3 class="text-xl font-cartoon text-white mb-2">You're In! 🎉</h3>
-<p class="text-white/90">Thanks for joining our waitlist! We'll notify you as soon as LeadCap.Guru is ready to revolutionize your ad analytics.</p>
-</div>
-</div>
-
-<!-- Benefits Section -->
-<div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-<div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-</svg>
-</div>
-<h3 class="text-xl font-cartoon mb-2">Early Access</h3>
-<p class="text-white/80">Be among the first to use our revolutionary ad analytics platform</p>
-</div>
-<div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-</svg>
-</div>
-<h3 class="text-xl font-cartoon mb-2">Special Pricing</h3>
-<p class="text-white/80">Exclusive discounts and special offers for early adopters</p>
-</div>
-<div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
-</svg>
-</div>
-<h3 class="text-xl font-cartoon mb-2">Direct Input</h3>
-<p class="text-white/80">Help shape the product with your feedback and feature requests</p>
-</div>
+<a href="https://dashboard.leadcap.guru/register" class="w-full btn-secondary py-4 px-8 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+Start your Ad Adventure
+</a>
+<p class="text-white/80 text-sm mt-4">30-day free trial. Card required, not charged until day 30.</p>
 </div>
 </div>
 </div>
 </section>
 </main>
-
-<!-- Error Modal -->
-<div id="errorModal" class="modal">
-<div class="modal-content">
-<h3 class="text-xl font-cartoon text-[var(--text-color)] mb-4">Oops!</h3>
-<p id="errorMessage" class="text-[var(--text-color)] mb-6"></p>
-<button onclick="closeModal()" class="btn-primary px-6 py-2">Try Again</button>
-</div>
-</div>
 
 <!-- Footer -->
 <footer class="bg-[var(--neutral-medium)]/50 text-[var(--text-color)]">
@@ -190,77 +119,13 @@ Join the Waitlist
 </div>
 </div>
 <div class="mt-6 pt-6 border-t border-[var(--neutral-medium)] text-center text-sm">
-<p>© 2024 LeadCap.Guru. All rights reserved. Have a sunny day!</p>
+<p>© 2026 LeadCap.Guru. All rights reserved. Have a sunny day!</p>
 </div>
 </div>
 </footer>
 
 </div>
 </div>
-
-<script>
-document.getElementById('waitlistForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const email = document.getElementById('email').value;
-    const userType = document.getElementById('userType').value;
-    const submitButton = e.target.querySelector('button[type="submit"]');
-    
-    // Disable button and show loading state
-    submitButton.disabled = true;
-    submitButton.textContent = 'Joining...';
-    
-    try {
-        const response = await fetch('https://g0hsn7ct-5000.uks1.devtunnels.ms/api/waitlist', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email: email,
-                userType: userType.charAt(0).toUpperCase() + userType.slice(1)
-            })
-        });
-        
-        const data = await response.json();
-        
-        if (data.success) {
-            // Hide form and show success message
-            document.getElementById('waitlistForm').style.display = 'none';
-            document.getElementById('successMessage').classList.add('show');
-            
-            // Track the event with Google Analytics
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'waitlist_signup', {
-                    'event_category': 'engagement',
-                    'event_label': userType,
-                    'value': 1
-                });
-            }
-        } else {
-            throw new Error(data.error || 'Failed to join waitlist');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        showErrorModal(error.message.includes('already registered') ? 
-            'This email is already on our waitlist!' : 
-            'Something went wrong. Please try again.');
-        
-        // Re-enable button
-        submitButton.disabled = false;
-        submitButton.textContent = 'Join the Waitlist';
-    }
-});
-
-function showErrorModal(message) {
-    document.getElementById('errorMessage').textContent = message;
-    document.getElementById('errorModal').classList.add('show');
-}
-
-function closeModal() {
-    document.getElementById('errorModal').classList.remove('show');
-}
-</script>
 
 </body>
 </html>
