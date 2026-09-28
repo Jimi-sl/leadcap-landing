@@ -6,4 +6,5 @@ assets/css/*.css
 
 # Local working docs - not meant for the remote repo
 LAUNCH-PLATFORMS.md
+GTM-FUNNEL.md
 SaaS Launch Platforms .xlsx
