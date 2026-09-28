@@ -31,14 +31,64 @@
 <!-- See ../index.htm for why this replaced the cdn.tailwindcss.com script +
      runtime style block (render-blocking script, Lighthouse FCP finding). -->
 <link rel="stylesheet" href="../assets/css/privacy.css"/>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PVT6MS50VF"></script>
+    <!-- Cookie consent gate (UK PECR): GA is a non-essential cookie and must
+     not fire until the visitor consents. Same script (only the
+     privacy-policy link differs) as index.htm's - see that file's comment
+     for the full explanation. -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+(function() {
+  var GA_ID = 'G-PVT6MS50VF';
+  var STORAGE_KEY = 'leadcap_cookie_consent';
+  var PRIVACY_URL = './index.htm';
 
-  gtag('config', 'G-PVT6MS50VF');
+  function loadGA() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  function getConsent() {
+    try { return window.localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+  function setConsent(value) {
+    try { window.localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
+  }
+
+  var stored = getConsent();
+  if (stored === 'granted') { loadGA(); return; }
+  if (stored === 'denied') { return; }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var banner = document.createElement('div');
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#fff;border-top:1px solid #e5e7eb;box-shadow:0 -2px 10px rgba(0,0,0,0.08);padding:16px 20px;';
+    banner.innerHTML =
+      '<div style="max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">' +
+        '<p style="margin:0;font-size:14px;color:#4b5563;flex:1 1 320px;">We use Google Analytics to understand how visitors use LeadCap. See our <a href="' + PRIVACY_URL + '" style="text-decoration:underline;color:#4b5563;">Privacy Policy</a>.</p>' +
+        '<div style="display:flex;gap:10px;flex-shrink:0;">' +
+          '<button id="leadcap-cookie-decline" style="padding:8px 16px;font-size:14px;font-weight:500;border:1px solid #d1d5db;border-radius:6px;background:#fff;color:#374151;cursor:pointer;">Decline</button>' +
+          '<button id="leadcap-cookie-accept" style="padding:8px 16px;font-size:14px;font-weight:500;border:none;border-radius:6px;background:#2563eb;color:#fff;cursor:pointer;">Accept</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(banner);
+
+    document.getElementById('leadcap-cookie-accept').addEventListener('click', function() {
+      setConsent('granted');
+      loadGA();
+      banner.remove();
+    });
+    document.getElementById('leadcap-cookie-decline').addEventListener('click', function() {
+      setConsent('denied');
+      banner.remove();
+    });
+  });
+})();
 </script>
 </head>
 <body class="bg-white">
